@@ -4,6 +4,14 @@
 
 System Preferences > Sound > PLay sound at startup: Disabled
 
+Prefer tabs: always
+
+Ask to keep changes when closing documents: Disabled
+
+Show scroll bars: automatically
+
+Allow handoff: Disabled
+
 ## iTerm
 
 .zshrc
@@ -290,3 +298,10 @@ brew install libpq
 brew install bat ca-certificates cmake csvkit curl entr gnupg granted grep helm httpie jq kubectx md5sha1sum watch tree sops speedtest jless
 ```
 
+
+
+## Python
+
+alias python=$(pyenv which python)
+
+then newenv
