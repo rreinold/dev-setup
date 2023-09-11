@@ -305,3 +305,32 @@ brew install bat ca-certificates cmake csvkit curl entr gnupg granted grep helm 
 alias python=$(pyenv which python)
 
 then newenv
+
+## Zoom
+
+General:
+
+Always show meeting controls: disabled
+
+ask me to confirm when I leave meeting: Disabled
+
+Stop my video and audio when my display is off: Enabled
+
+Video:
+
+Original ratio: Disabled
+
+HD: Enabled
+
+Mirror my video: enabled
+
+Touch up: 25%
+
+Always display parti names: Disabled
+
+Stop by video when joining a meeting: Enabled
+
+Audio:
+
+- Automaticall join computer audio
+- Mute my mic when joining
