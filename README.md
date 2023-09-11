@@ -278,3 +278,15 @@ Key Bindings:
 
 ```
 
+## psql cli
+
+```
+brew install libpq
+```
+
+## misc
+
+```
+brew install bat ca-certificates cmake csvkit curl entr gnupg granted grep helm httpie jq kubectx md5sha1sum watch tree sops speedtest jless
+```
+
