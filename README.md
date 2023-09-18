@@ -12,6 +12,10 @@ Show scroll bars: automatically
 
 Allow handoff: Disabled
 
+Notifications:
+
+- show preview: When unlocked (see Slack settings for dont preview)
+
 ## iTerm
 
 .zshrc
@@ -35,6 +39,8 @@ source shell_profiles
 
 Turn off Correct spelling automatically, Capitalize, Use smart quotes
 
+- Keyboard > Services > Text: Disable All
+
 ### Keyboard
 
 Key Repeat: 6/7
@@ -42,6 +48,10 @@ Key Repeat: 6/7
 Delay Until Repeat: 2/5
 
 Caps Lock: mapped to escape
+
+## Spelling
+
+all off
 
 ## Trackpad
 
@@ -80,6 +90,8 @@ Alfred:
 - Launch at login: Enabled
 - Alfred Hotkey: command+space
 - Search: Applications, Preferences
+- Add Applications dir
+- Include Home Dir: Disabled
 
 BetterSnapTool
 
@@ -156,7 +168,7 @@ killall Dock
 
 Emojis: Thumbs up, Bow, Eyes
 
-My Keywords: robby, rreinolsc
+My Keywords: robby, rreinoldsc
 
 Sidebar: Direct, Later, Mentions& Reactions
 
@@ -170,6 +182,12 @@ one ssh key per gh account
 ssh-keygen -f ~/.ssh/<KEY_NAME> -N ''
 ssh-add ~/.ssh/<KEY_NAME>
 ```
+
+## Git
+
+git config --global user.email "<EMAIL>"
+
+git config --global user.name "Your Name"
 
 ## iTerm
 
@@ -295,10 +313,10 @@ brew install libpq
 ## misc
 
 ```
-brew install bat ca-certificates cmake csvkit curl entr gnupg granted grep helm httpie jq kubectx md5sha1sum watch tree sops speedtest jless
+brew install bat ca-certificates cmake csvkit curl entr gnupg grep helm httpie jq kubectx md5sha1sum watch tree sops jless
 ```
 
-
+need to add repo for granted, speedtest-cli
 
 ## Python
 
@@ -334,3 +352,68 @@ Audio:
 
 - Automaticall join computer audio
 - Mute my mic when joining
+
+## iMessage
+
+Play sound effects: Disabled
+
+## iCloud
+
+Sync just contacts
+
+
+
+ ## Control Center
+
+Menu bar > Clock
+
+- 24h
+- Show seconds
+- Show date: Always
+
+
+
+## Errors
+
+curl cannot find certs
+
+Keychain > Export All > /opt/Homebrew/openssl@<VERSION>/certs/cert.pem
+
+set export SSL_CERT_FILE=/opt/Homebrew/openssl@<VERSION>/certs/cert.pem
+
+
+
+## Vim
+
+.vimrc:
+
+```
+:command W w
+```
+
+
+
+```
+```
+
+
+
+## node
+
+install nvm: https://github.com/nvm-sh/nvm#usage
+
+```
+npm install --global yarn
+
+```
+
+
+
+cd where there is a .nvmrc
+
+```
+nvm install
+```
+
+
+
