@@ -16,13 +16,104 @@ Notifications:
 
 - show preview: When unlocked (see Slack settings for dont preview)
 
+Mission Control
+
+	- Automatically rearrange: Disabled
+	- Displays have different spaces: Disabled
+
 ## iTerm
 
 .zshrc
 
 source shell_profiles
 
+Ensures true word-by-word moves works, with shell setting:
+
+```
+autoload -U select-word-style
+select-word-style bash
+```
+
+Keyboard shortcuts
+
+| Input                       | Action    | Keyboard Shortcut |
+| --------------------------- | --------- | ----------------- |
+| i#/bin/bash\n\n             | Send Text | cmd + shift + b   |
+| (prevent maximize shortcut) | Ignore    | cmd + Enter       |
+
+
+
+Settings:
+
+- Closing
+  - Confirm x2: Disabled
+
 ## PyCharm
+
+- Appearance and Behavior
+  - System Settings
+    - Project
+      - Reopen: Disable
+  - Editor
+    - Enable preview tab: Enabled
+    - Gutter
+      - Line numbers only
+    - Inlay Hints
+      - All: Disabled
+    - General
+      - Smart Keys
+        - Insert pair quote: Disabled
+      - Change font size..mouse
+        - Enabled
+      - Editor Tabs
+        - Show tabs in: Squeeze
+        - Show pinned tabs in separate row: Enabled
+        - Show file icon: Disabled
+        - Show file extension: Disabled
+        - Close button: Disabled
+      - Tab Order
+        - Open new tabs at end: Enabled
+      - Closing Policy
+        - Tab Limit: 20
+  - PEP 8 style violation: ignore
+- Version Control
+  - Confirmation
+    - Disable all
+
+- Key mappings
+
+| Action                   | Key              |
+| ------------------------ | ---------------- |
+| Remove all breakpoints   | shift+cmd+del    |
+| Delete Line              | cmd+D            |
+| Text End                 | cmd+down         |
+| Text Start               | cmd+up           |
+| Go to file               | cmd+T            |
+| Go to line               | cmd+shift+T      |
+| Move line up             | option+up        |
+| Move line down           | option+down      |
+| Next tab                 | option+cmd+right |
+| Prev tab                 | option+cmd+left  |
+| Open file                | cmd+O            |
+| Rename element           | shift+cmd+R      |
+| Restore default layout   | cmd+`            |
+| Debugger: Resume Program | ctrl+up          |
+| Split Right              | cmd+2            |
+| Step Into My code        | ctrl + right     |
+| Step Out                 | ctrl + left      |
+| Toggle Line Breakpoint   | option + cmd + / |
+| Plugins > Python File    | cmd + N          |
+| Editor > Pin Active Tab  | cmd + P          |
+
+
+
+## Poetry
+
+https://python-poetry.org/docs/
+
+using a curl
+
+
 
 ## Applications
 
@@ -36,10 +127,13 @@ source shell_profiles
 | rew     | <PERSONAL_EMAIL>         |
 | rqq     | <USERNAME>               |
 | zmr     | <ZOOM_PERSONAL_ROOM_URL> |
+| c@      | category:primary         |
 
 Turn off Correct spelling automatically, Capitalize, Use smart quotes
 
 - Keyboard > Services > Text: Disable All
+
+Keyboard Shortcuts > Screenshots > Set Save screen to file as Cmd + Shift + 3
 
 ### Keyboard
 
@@ -48,6 +142,13 @@ Key Repeat: 6/7
 Delay Until Repeat: 2/5
 
 Caps Lock: mapped to escape
+
+Shortcuts:
+
+- Mission Control
+  - Mission Control (yes again)
+    - Move left a space: Disabled
+    - Move right a space: Disabled
 
 ## Spelling
 
@@ -63,11 +164,13 @@ all off
 
   - Tap to click: Enabled
 
-  - Lookup and data detectors: Disabled
+  - 
+
+  - Lookup and data detectors: Off
 
   - Secondary Click: Enabled
 
-  - Force Click and haptic feedback: Enabled
+  - Force Click and haptic feedback: Disabled
 
 - Scroll & Zoom
   - Scroll direction: Natural
@@ -86,12 +189,15 @@ all off
 
 Alfred:
 
+Must install via brew, not App Store
+
 - System Settings > Keyboard > Keyboard Shortcuts > Spotlight: Disable
 - Launch at login: Enabled
 - Alfred Hotkey: command+space
 - Search: Applications, Preferences
 - Add Applications dir
 - Include Home Dir: Disabled
+- Appearance > Options > Hide Menu Bar
 
 BetterSnapTool
 
@@ -109,10 +215,18 @@ Micro-Snitch
 Fantastical
 
 - Show dock: control+option+space
+- Open maps: Google Maps
+- General > Play user interface sounds: Disabled
 
 ## Chrome
 
-Disable media controls
+chrome://flags
+
+​	Hardware Media Key Handling: Disabled
+
+Add my fork of chrome extension: https://github.com/rreinold/chrome-bookmark-search
+
+Extensions > Enable Developer Mode > Load unpacked
 
 ## Hostname
 
@@ -135,7 +249,7 @@ Minimize windows into application icon: Yes
 
 Show Recent applications in Dock: No
 
-Menu Bar: Automatically hide and show the menu bar on desktop/full screen: No
+Menu Bar: Automatically hide and show the menu bar on desktop/full screen: Always
 
 Applications:
 
@@ -162,8 +276,12 @@ defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-t
 killall Dock
 ```
 
+Desktop & Dock: Shortcuts
 
+​	Remove ctrl up and down
 
+## Typora
+Sstting > Disable pair quotes
 ## Slack
 
 Emojis: Thumbs up, Bow, Eyes
@@ -173,6 +291,8 @@ My Keywords: robby, rreinoldsc
 Sidebar: Direct, Later, Mentions& Reactions
 
 Spellcheck: Off
+
+Advanced: Choose download location
 
 ## Github
 
@@ -193,7 +313,7 @@ git config --global user.name "Your Name"
 
 Preferences > Profiles:
 
-- Working Direectory: Reuse previous session's directory
+- Working Directory: Reuse previous session's directory
 
 - Terminal > Unlimited Scrollback
 
@@ -201,6 +321,10 @@ Preferences > Profiles:
 - Notifications > Notification Center Alerts: Disabled
 - Keys
   - Preset > Natural Text Editting
+
+## AWS
+
+https://aws.amazon.com/cli/ install via pkg
 
 ## Terminal
 
@@ -231,11 +355,24 @@ brew install zsh wget
 
 Run setup here: https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 
+prepend:
+
+```eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+```
+plugins=(git tmux  zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
+```
+
+
+
 ## Docker
 
 - General:
   - Start at login: Disabled
-
+  - Start Docker Dashhboard at startup: Disabled
+  
 - Resources:
   - CPUs: 3
   - Memory: 4GB
@@ -253,6 +390,14 @@ Run setup here: https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 - Sync
   - chrome://settings/syncSetup/advanced
   - Sync Apps and Bookmarks
+- Notes
+  - control + enter: ignores autocompleted URLs
+  - clear history to prevent autocompleting
+- Site Settings
+  - Notifications
+    - Disabled for all
+
+
 
 ## Finder
 
@@ -308,12 +453,17 @@ Key Bindings:
 
 ```
 brew install libpq
+brew info libpq
+# use libpq instead?
+export PATH=/opt/homebrew/Cellar/postgresql@13/13.12/bin/:$PATH
 ```
+
+
 
 ## misc
 
 ```
-brew install bat ca-certificates cmake csvkit curl entr gnupg grep helm httpie jq kubectx md5sha1sum watch tree sops jless
+brew install bat ca-certificates cmake csvkit curl entr gnupg grep helm httpie jq kubectx md5sha1sum watch tree sops jless glow tmux overmind nmap gh
 ```
 
 need to add repo for granted, speedtest-cli
@@ -353,6 +503,10 @@ Audio:
 - Automaticall join computer audio
 - Mute my mic when joining
 
+Video:
+
+​	- 49 participants
+
 ## iMessage
 
 Play sound effects: Disabled
@@ -371,15 +525,48 @@ Menu bar > Clock
 - Show seconds
 - Show date: Always
 
+Wifi: Always Show
+
+Bluetooth: Always Show
+
+Sound: Always Show
+
+Focus: Don't Show
+
+Battery: 
+
+- Show Percentage: Yes
+
+Spotlight: Don't show
+
 
 
 ## Errors
 
-curl cannot find certs
+curl error: "error setting certificate verify locations"
 
-Keychain > Export All > /opt/Homebrew/openssl@<VERSION>/certs/cert.pem
+Verify:
 
-set export SSL_CERT_FILE=/opt/Homebrew/openssl@<VERSION>/certs/cert.pem
+```
+echo $SSL_CERT_FILE
+```
+
+Keychain > System Roots > Certificates
+
+```
+brew info openssl
+=> /opt/homebrew/etc/openssl@3/certs
+```
+
+Certificates > Select All > File > Export Items... > /opt/Homebrew/openssl@<VERSION>/certs/cert.pem
+
+add to shell profile:
+
+```
+export SSL_CERT_FILE=/opt/Homebrew/openssl@<VERSION>/certs/cert.pem
+```
+
+
 
 
 
@@ -417,3 +604,24 @@ nvm install
 
 
 
+## Speedtest
+
+```
+brew tap teamookla/speedtest
+brew update
+brew install speedtest
+```
+
+## Whatsapp
+
+- Setting > Notifications > Turn off sound
+
+try `fd`
+
+`moom`
+
+## VSCode
+
+Hover delay: 1000ms
+
+Hover disappear: 0ms
