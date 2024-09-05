@@ -21,6 +21,10 @@ Mission Control
 	- Automatically rearrange: Disabled
 	- Displays have different spaces: Disabled
 
+display
+
+night shift: sunset
+
 ## iTerm
 
 .zshrc
@@ -54,6 +58,8 @@ Settings:
   - System Settings
     - Project
       - Reopen: Disable
+  - Terminal
+    - Copy on selection
   - Editor
     - Enable preview tab: Enabled
     - Gutter
@@ -65,6 +71,8 @@ Settings:
         - Insert pair quote: Disabled
       - Change font size..mouse
         - Enabled
+      - Code Folding
+        - Import: Disabled
       - Editor Tabs
         - Show tabs in: Squeeze
         - Show pinned tabs in separate row: Enabled
@@ -80,32 +88,58 @@ Settings:
   - Confirmation
     - Disable all
 
+- Editor > File Types > Ignore File and Folders:
+  - `.venv`
+  - `.node_modules`
+  - `.run`
+  - `.coverage`
+  - `.mypy_cache`
+  - `.pytest_cache`
+  - `*.egg-info`
+  - `build`
+
+- Move Structure section up to Top Left
+- Tools
+  - Terminal
+    - Cursor shape: Block
+
 - Key mappings
 
-| Action                   | Key              |
-| ------------------------ | ---------------- |
-| Remove all breakpoints   | shift+cmd+del    |
-| Delete Line              | cmd+D            |
-| Text End                 | cmd+down         |
-| Text Start               | cmd+up           |
-| Go to file               | cmd+T            |
-| Go to line               | cmd+shift+T      |
-| Move line up             | option+up        |
-| Move line down           | option+down      |
-| Next tab                 | option+cmd+right |
-| Prev tab                 | option+cmd+left  |
-| Open file                | cmd+O            |
-| Rename element           | shift+cmd+R      |
-| Restore default layout   | cmd+`            |
-| Debugger: Resume Program | ctrl+up          |
-| Split Right              | cmd+2            |
-| Step Into My code        | ctrl + right     |
-| Step Out                 | ctrl + left      |
-| Toggle Line Breakpoint   | option + cmd + / |
-| Plugins > Python File    | cmd + N          |
-| Editor > Pin Active Tab  | cmd + P          |
+| Action                           | Key              |
+| -------------------------------- | ---------------- |
+| Remove all breakpoints           | shift+cmd+del    |
+| Delete Line                      | cmd+D            |
+| Text End                         | cmd+down         |
+| Text Start                       | cmd+up           |
+| Go to file                       | cmd+T            |
+| Go to line                       | cmd+shift+T      |
+| Move line up                     | option+up        |
+| Move line down                   | option+down      |
+| Next tab                         | option+cmd+right |
+| Prev tab                         | option+cmd+left  |
+| Open file                        | cmd+O            |
+| Rename element                   | shift+cmd+R      |
+| Restore default layout           | cmd+`            |
+| Debugger: Resume Program         | ctrl+up          |
+| Split Right                      | cmd+2            |
+| Step Into My code                | ctrl + right     |
+| Step Out                         | ctrl + left      |
+| Toggle Line Breakpoint           | option + cmd + / |
+| Plugins > Python File            | cmd + N          |
+| Editor > Pin Active Tab          | cmd + P          |
+| Restore Current Layout           | cmd + `          |
+| Version Control > Git > Annotate | cmd + G          |
+| Resolve Conflicts...             | opt+r then opt+c |
+| ctrl + T                         | Open Terminal    |
 
+![image-20240224091335542](/Users/r/Library/Application Support/typora-user-images/image-20240224091335542.png)
 
+![image-20240224091344232](/Users/r/Library/Application Support/typora-user-images/image-20240224091344232.png)
+
+Plugins:
+
+- Terraform and HCL
+  - w terraform installed locally
 
 ## Poetry
 
@@ -184,6 +218,8 @@ all off
 ## Sleep
 
 - Hooks
+  - `blueutil`
+
 
 ## Tool Configurations
 
@@ -293,6 +329,10 @@ Sidebar: Direct, Later, Mentions& Reactions
 Spellcheck: Off
 
 Advanced: Choose download location
+
+Notif
+
+​	Notify me when a huddle starts in one of my channels: Disabled
 
 ## Github
 
@@ -533,6 +573,8 @@ Sound: Always Show
 
 Focus: Don't Show
 
+Fast User Switching: Don't Show
+
 Battery: 
 
 - Show Percentage: Yes
@@ -575,12 +617,11 @@ export SSL_CERT_FILE=/opt/Homebrew/openssl@<VERSION>/certs/cert.pem
 .vimrc:
 
 ```
-:command W w
-```
-
-
-
-```
+:syntax on
+:set number
+cnoreabbrev W w
+cnoreabbrev Wq wq
+cnoreabbrev Q q
 ```
 
 
@@ -590,7 +631,7 @@ export SSL_CERT_FILE=/opt/Homebrew/openssl@<VERSION>/certs/cert.pem
 install nvm: https://github.com/nvm-sh/nvm#usage
 
 ```
-npm install --global yarn
+npm install --global yarn http-status-codes
 
 ```
 
@@ -611,6 +652,15 @@ brew tap teamookla/speedtest
 brew update
 brew install speedtest
 ```
+
+## Terraform
+
+```
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+```
+
+https://developer.hashicorp.com/terraform/install
 
 ## Whatsapp
 
