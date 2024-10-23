@@ -61,6 +61,7 @@ Settings:
   - Terminal
     - Copy on selection
   - Editor
+    - Light bulb: Disabled
     - Enable preview tab: Enabled
     - Gutter
       - Line numbers only
@@ -83,6 +84,12 @@ Settings:
         - Open new tabs at end: Enabled
       - Closing Policy
         - Tab Limit: 20
+    - Code Folding
+      - Show arrows: Disabled
+    - Inspections
+      - Typo: Disabled
+      - Grammar: Disabled
+      - Duplicate Code Fragments: Disabled
   - PEP 8 style violation: ignore
 - Version Control
   - Confirmation
@@ -105,32 +112,39 @@ Settings:
 
 - Key mappings
 
-| Action                           | Key              |
-| -------------------------------- | ---------------- |
-| Remove all breakpoints           | shift+cmd+del    |
-| Delete Line                      | cmd+D            |
-| Text End                         | cmd+down         |
-| Text Start                       | cmd+up           |
-| Go to file                       | cmd+T            |
-| Go to line                       | cmd+shift+T      |
-| Move line up                     | option+up        |
-| Move line down                   | option+down      |
-| Next tab                         | option+cmd+right |
-| Prev tab                         | option+cmd+left  |
-| Open file                        | cmd+O            |
-| Rename element                   | shift+cmd+R      |
-| Restore default layout           | cmd+`            |
-| Debugger: Resume Program         | ctrl+up          |
-| Split Right                      | cmd+2            |
-| Step Into My code                | ctrl + right     |
-| Step Out                         | ctrl + left      |
-| Toggle Line Breakpoint           | option + cmd + / |
-| Plugins > Python File            | cmd + N          |
-| Editor > Pin Active Tab          | cmd + P          |
-| Restore Current Layout           | cmd + `          |
-| Version Control > Git > Annotate | cmd + G          |
-| Resolve Conflicts...             | opt+r then opt+c |
-| ctrl + T                         | Open Terminal    |
+- Build, ....
+  - Coverage
+    - Activate window: Disabled
+
+
+| Action                                | Key                |
+| ------------------------------------- | ------------------ |
+| Remove all breakpoints                | shift+cmd+del      |
+| Delete Line                           | cmd+D              |
+| Text End                              | cmd+down           |
+| Text Start                            | cmd+up             |
+| Go to file                            | cmd+T              |
+| Go to line                            | cmd+shift+T        |
+| Move line up                          | option+up          |
+| Move line down                        | option+down        |
+| Next tab                              | option+cmd+right   |
+| Prev tab                              | option+cmd+left    |
+| Open file                             | cmd+O              |
+| Rename element                        | shift+cmd+R        |
+| Restore default layout                | cmd+`              |
+| Debugger: Resume Program              | ctrl+up            |
+| Split Right                           | cmd+2              |
+| Step Into My code                     | ctrl + right       |
+| Step Out                              | ctrl + left        |
+| Toggle Line Breakpoint                | option + cmd + /   |
+| Plugins > Python File                 | cmd + N            |
+| Editor > Pin Active Tab               | cmd + P            |
+| Restore Current Layout                | cmd + `            |
+| Version Control > Git > Annotate      | cmd + G            |
+| Resolve Conflicts...                  | opt+r then opt+c   |
+| ctrl + T                              | Open Terminal      |
+| command + option + shift + O          | disable copilot    |
+| move caret to end text with selection | cmd + shift + down |
 
 ![image-20240224091335542](/Users/r/Library/Application Support/typora-user-images/image-20240224091335542.png)
 
@@ -140,6 +154,9 @@ Plugins:
 
 - Terraform and HCL
   - w terraform installed locally
+- inspection-lens
+  - inline errors
+
 
 ## Poetry
 
